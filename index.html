@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GeoEditor Web</title>
 
-  <!-- Hoja de estilos de Leaflet para mostrar el mapa -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
-  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -17,45 +14,43 @@
     <p>Herramienta para crear rutas educativas</p>
   </header>
 
-  <section class="controls">
+  <div class="sidebar">
+    <h3>Proyecto</h3>
     <input type="text" id="project-ciudad" placeholder="Ciudad" />
     <input type="text" id="project-zona" placeholder="Zona" />
     <input type="text" id="project-autor" placeholder="Autor" />
-
     <button id="new-project">Nuevo Proyecto</button>
-    <button id="save-project">Guardar</button>
-    <button id="load-project">Cargar</button>
-  </section>
+    <button id="save-project">Guardar Proyecto</button>
+    <button id="load-project">Cargar Proyecto</button>
 
-  <div id="map" style="height: 80vh;"></div>
+    <h3>Editor de Puntos</h3>
+    <button id="add-marker">Añadir Punto</button>
 
-  <section id="marker-form" style="display: none;">
-    <h2>Editar Punto</h2>
-    <input type="text" id="title" placeholder="Título" />
-    <textarea id="description" placeholder="Descripción"></textarea>
+    <div id="marker-form" style="display: none;">
+      <label>Título</label>
+      <input type="text" id="title" />
+      <label>Descripción</label>
+      <textarea id="description"></textarea>
+      <label>Coordenadas</label>
+      <input type="number" id="lat" step="0.000001" />
+      <input type="number" id="lng" step="0.000001" />
+      <button id="update-coords">Actualizar</button>
+      <button id="save-marker">Guardar Cambios</button>
+      <button id="cancel-marker">Cancelar</button>
+      <button id="delete-marker">Eliminar Punto</button>
+    </div>
+  </div>
 
-    <label for="lat">Latitud:</label>
-    <input type="number" id="lat" step="0.000001" />
-
-    <label for="lng">Longitud:</label>
-    <input type="number" id="lng" step="0.000001" />
-
-    <button id="update-coords">Actualizar Coordenadas</button>
-    <button id="save-marker">Guardar Cambios</button>
-    <button id="cancel-marker">Cancelar</button>
-    <button id="delete-marker">Eliminar Punto</button>
-  </section>
+  <div id="map"></div>
 
   <footer>
-    <span id="coordinates">Coordenadas: --</span>
+    <span id="coordinates">Coord: --</span>
     <span id="zoom-level">Zoom: --</span>
     <span id="project-status">Estado: sin guardar</span>
   </footer>
 
-  <!-- Librería Leaflet (JS) -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <!-- Archivo JS adaptado para la web -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
   <script src="renderer_web.js"></script>
 </body>
 </html>

@@ -1,72 +1,56 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 10px;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.sidebar {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 280px;
+  background: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  overflow-y: auto;
+  max-height: 85vh;
+}
+
+.sidebar h3 {
+  margin-top: 1em;
+}
+
+.sidebar input, .sidebar textarea, .sidebar button {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+  box-sizing: border-box;
 }
 
 #map {
   position: absolute;
-  top: 0;
+  top: 80px;
   left: 300px;
   right: 0;
+  bottom: 30px;
+}
+
+footer {
+  position: absolute;
   bottom: 0;
-  z-index: 1;
-}
-
-#sidebar {
-  width: 300px;
-  height: 100%;
-  background: #f3f3f3;
-  border-right: 1px solid #ccc;
-  position: absolute;
-  top: 0;
   left: 0;
-  padding: 10px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  z-index: 2;
+  right: 0;
+  height: 30px;
+  background: #eee;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-#sidebar h2 {
-  margin-top: 20px;
-  font-size: 16px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-}
-
-#sidebar input,
-#sidebar textarea,
-#sidebar button {
-  width: 100%;
-  margin: 5px 0;
-  padding: 6px;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-#marker-form {
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 8px;
-  margin-top: 10px;
-}
-
-#project-status {
-  font-size: 12px;
-  color: #333;
-  margin: 4px 0 10px 0;
-  background: #e6e6e6;
-  padding: 4px;
-  text-align: center;
-}
-
-#coordinates, #zoom-level {
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-  background: rgba(255,255,255,0.8);
-  padding: 4px 8px;
-  font-size: 12px;
-  z-index: 1000;
-  border: 1px solid #ccc;
-  bord
