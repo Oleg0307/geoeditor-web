@@ -12,31 +12,45 @@ header {
 .sidebar {
   position: absolute;
   top: 80px;
-  left: 10px;
-  width: 280px;
+  left: 0;
+  width: 320px;
   background: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 15px;
+  border-right: 1px solid #ccc;
   z-index: 1000;
   overflow-y: auto;
-  max-height: 85vh;
+  height: calc(100vh - 110px);
 }
 
 .sidebar h3 {
   margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.sidebar input, .sidebar textarea, .sidebar button {
+.sidebar input,
+.sidebar textarea,
+.sidebar button {
   width: 100%;
-  margin-bottom: 8px;
-  padding: 6px;
+  display: block;
+  margin-bottom: 10px;
+  padding: 6px 8px;
+  font-size: 14px;
   box-sizing: border-box;
+}
+
+.sidebar label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: bold;
 }
 
 #map {
   position: absolute;
   top: 80px;
-  left: 300px;
+  left: 320px;
   right: 0;
   bottom: 30px;
 }
@@ -53,4 +67,13 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+#project-status {
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
 }
