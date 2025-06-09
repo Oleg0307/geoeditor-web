@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GeoEditor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Proyecto</h2>
+    <input id="project-ciudad" placeholder="Ciudad">
+    <input id="project-zona" placeholder="Zona">
+    <input id="project-autor" placeholder="Autor">
+    <div id="project-status">Sin proyecto</div>
+    <button id="new-project">Nuevo Proyecto</button>
+    <button id="load-project">Cargar Proyecto</button>
+    <button id="save-project">Guardar Proyecto</button>
+
+    <h2>Editor de Puntos</h2>
+    <button id="add-marker">Añadir Punto</button>
+
+    <div id="marker-form" style="display:none;">
+      <input id="title" placeholder="Título del punto">
+      <textarea id="description" placeholder="Descripción"></textarea>
+      <input id="lat" placeholder="Latitud">
+      <input id="lng" placeholder="Longitud">
+      <button id="update-coords">Actualizar Coordenadas</button>
+      <button id="save-marker">Guardar Cambios</button>
+      <button id="delete-marker">Eliminar</button>
+      <button id="cancel-marker" class="small-button">Cancelar</button>
+    </div>
+  </div>
+
+  <div id="map"></div>
+  <div id="coordinates"></div>
+  <div id="zoom-level"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

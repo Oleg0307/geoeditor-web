@@ -1,0 +1,33 @@
+{
+  "pueblo": "Javea",
+  "autor": "Profesor de Geografía",
+  "fecha_creacion": "2025-06-07",
+  "puntos": [
+    {
+      "id": 1,
+      "titulo": "Iglesia de San Bartolomé",
+      "descripcion": "Iglesia gótica del centro histórico",
+      "coordenadas": [38.7895, 0.1669],
+      "preguntas": [
+        {
+          "enunciado": "¿Qué estilo arquitectónico tiene esta iglesia?",
+          "opciones": ["Gótico", "Barroco", "Románico", "Neoclásico"],
+          "correcta": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Playa del Arenal",
+      "descripcion": "Principal playa turística de Jávea",
+      "coordenadas": [38.7822, 0.1837],
+      "preguntas": [
+        {
+          "enunciado": "¿Qué tipo de arena hay en esta playa?",
+          "opciones": ["Fina", "Grava", "Roca", "No hay arena"],
+          "correcta": 0
+        }
+      ]
+    }
+  ]
+}
